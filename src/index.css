@@ -1,0 +1,283 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: #0D0C0B;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -15%, rgba(201, 169, 97, 0.12), transparent 70%),
+      radial-gradient(circle at 10% 30%, rgba(201, 169, 97, 0.05), transparent 28rem),
+      radial-gradient(circle at 90% 70%, rgba(201, 169, 97, 0.05), transparent 28rem),
+      linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    background-size: auto, auto, auto, 48px 48px, 48px 48px;
+    color: #F5F2EB;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Custom Metallic Gold Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0D0C0B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #A6873F, #FCF6BA, #8A6E2F);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #DFC486, #FFFFFF, #C9A961);
+}
+
+/* Luxury Metallic Utilities */
+@layer utilities {
+  /* Real Shiny Metallic Gold / Chrome Gradients */
+  .gold-metallic-text {
+    background: linear-gradient(135deg, #A6873F 0%, #FCF6BA 26%, #C9A961 52%, #F5E5B8 76%, #8A6E2F 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+
+  .gold-metallic-text-bright {
+    background: linear-gradient(135deg, #DFC486 0%, #FFFFFF 30%, #FCF6BA 65%, #C9A961 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+
+  .gold-foil-subtle {
+    background: linear-gradient(135deg, #DFC486 0%, #EEDCBA 50%, #A6873F 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+
+  /* Polished Gold Chrome Borders */
+  .gold-border {
+    border: 1px solid rgba(201, 169, 97, 0.3);
+    box-shadow: inset 0 1px 0 0 rgba(252, 246, 186, 0.2), 0 2px 10px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .gold-border:hover {
+    border-color: rgba(252, 246, 186, 0.7);
+    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.4), 0 0 20px rgba(201, 169, 97, 0.25);
+  }
+
+  .gold-border-active {
+    border-color: rgba(252, 246, 186, 0.85);
+    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.5), 0 0 15px rgba(201, 169, 97, 0.3);
+  }
+
+  /* Editorial Metallic Divider Line */
+  .gold-divider {
+    position: relative;
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent 0%, rgba(201, 169, 97, 0.15) 15%, rgba(252, 246, 186, 0.75) 50%, rgba(201, 169, 97, 0.15) 85%, transparent 100%);
+  }
+
+  .gold-divider-diamond {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 14px;
+  }
+
+  .gold-divider-diamond::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(201, 169, 97, 0.12) 15%, rgba(252, 246, 186, 0.7) 50%, rgba(201, 169, 97, 0.12) 85%, transparent 100%);
+  }
+
+  .gold-divider-diamond::after {
+    content: '';
+    position: relative;
+    z-index: 2;
+    width: 6px;
+    height: 6px;
+    transform: rotate(45deg);
+    background: linear-gradient(135deg, #FCF6BA, #C9A961, #8A6E2F);
+    box-shadow: 0 0 8px rgba(252, 246, 186, 0.9);
+  }
+
+  /* Polished Metallic Gold Button Treatments */
+  .btn-metallic-gold {
+    background: linear-gradient(135deg, #A6873F 0%, #FCF6BA 35%, #C9A961 70%, #8A6E2F 100%);
+    color: #0D0C0B !important;
+    border: 1px solid rgba(255, 246, 186, 0.85);
+    box-shadow: 0 4px 18px rgba(201, 169, 97, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    font-weight: 600;
+  }
+
+  .btn-metallic-gold:hover {
+    background: linear-gradient(135deg, #DFC486 0%, #FFFFFF 35%, #DFC486 70%, #A6873F 100%);
+    box-shadow: 0 6px 28px rgba(201, 169, 97, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  }
+
+  .btn-metallic-outline {
+    background: rgba(16, 15, 14, 0.85);
+    border: 1px solid rgba(201, 169, 97, 0.45);
+    color: #F5F2EB;
+    box-shadow: inset 0 1px 0 rgba(252, 246, 186, 0.2), 0 2px 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+  }
+
+  .btn-metallic-outline:hover {
+    border-color: rgba(252, 246, 186, 0.9);
+    color: #FCF6BA;
+    box-shadow: 0 0 22px rgba(201, 169, 97, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    background: rgba(26, 24, 22, 0.95);
+  }
+
+  /* Shimmer sweep effect on buttons */
+  .gold-shimmer-sweep {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .gold-shimmer-sweep::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -120%;
+    width: 60%;
+    height: 200%;
+    background: linear-gradient(
+      120deg,
+      transparent,
+      rgba(255, 255, 255, 0.25),
+      rgba(252, 246, 186, 0.5),
+      transparent
+    );
+    transform: rotate(25deg);
+    transition: all 0.75s ease;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .gold-shimmer-sweep:hover::after {
+    left: 150%;
+    opacity: 1;
+  }
+
+  /* Glass Dark with subtle gold rim */
+  .glass-dark {
+    background: rgba(16, 15, 14, 0.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(201, 169, 97, 0.25);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(252, 246, 186, 0.15);
+  }
+
+  /* Luxury Card Elevation */
+  .luxury-card-hover {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .luxury-card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.8), 0 0 24px rgba(201, 169, 97, 0.16);
+    border-color: rgba(252, 246, 186, 0.65);
+  }
+}
+
+/* 
+ * Black & Gold Palette Surface Mapping:
+ * Maps template light classes onto refined deep-black and charcoal tones
+ * with subtle luminance contrast rather than flat identical black.
+ */
+@layer utilities {
+  .bg-brand-cream {
+    background-color: #0D0C0B !important;
+  }
+
+  .bg-brand-cream-light {
+    background-color: #141312 !important;
+  }
+
+  .bg-brand-cream-dark {
+    background-color: #1E1C1A !important;
+  }
+
+  .bg-brand-beige {
+    background-color: #181614 !important;
+  }
+
+  .bg-brand-cream\/80 {
+    background-color: rgba(13, 12, 11, 0.82) !important;
+  }
+
+  .bg-brand-cream\/90,
+  .bg-brand-cream\/95 {
+    background-color: rgba(16, 15, 14, 0.92) !important;
+  }
+
+  .text-brand-black {
+    color: #F5F2EB !important;
+  }
+
+  .text-brand-black\/70 {
+    color: rgba(245, 242, 235, 0.72) !important;
+  }
+
+  .text-brand-black\/80 {
+    color: rgba(245, 242, 235, 0.82) !important;
+  }
+
+  .text-brand-black\/90 {
+    color: rgba(245, 242, 235, 0.92) !important;
+  }
+
+  .text-brand-gray {
+    color: #9E978C !important;
+  }
+
+  .border-brand-cream-dark,
+  .border-brand-cream-dark\/50,
+  .border-brand-cream-dark\/80 {
+    border-color: rgba(201, 169, 97, 0.22) !important;
+  }
+
+  .border-brand-black\/10,
+  .border-brand-black\/20,
+  .border-brand-black\/30 {
+    border-color: rgba(201, 169, 97, 0.3) !important;
+  }
+
+  .bg-brand-gold.text-brand-black,
+  .bg-brand-gold .text-brand-black {
+    color: #0D0C0B !important;
+  }
+
+  .bg-brand-cream.text-brand-black,
+  .bg-brand-cream .text-brand-black,
+  .bg-brand-cream-dark.text-brand-black,
+  .bg-brand-cream-dark .text-brand-black {
+    color: #F5F2EB !important;
+  }
+}
